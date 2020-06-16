@@ -1,0 +1,29 @@
+$primary-color: #092c4c;
+$secondary-color: #f2994a;
+.card-body {
+  display: flex;
+
+  .card-body-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+
+    .icon-box {
+      padding: 10px;
+      background: rgba(9, 44, 76, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //   background: $primary-color;
+      //   border: 1px solid rgba(4, 17, 30, 0.25);
+      border-radius: 50%;
+    }
+    svg {
+      padding: 5px;
+      //   border-radius: 50%;
+    }
+  }
+  .card-body-right {
+  }
+}

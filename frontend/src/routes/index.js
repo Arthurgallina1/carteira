@@ -7,13 +7,13 @@ import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
 
 export default function Routes() {
-    return (
-        <Switch>
-            <Route path='/' exact component={SignIn} />
-            <Route path='/signup' isPrivate component={SignUp} />
-            <Route path='/dashboard' isPrivate component={Dashboard} />
-
-            <Route path='/' component={() => <h1>404</h1>} />
-        </Switch>
-    );
+  return (
+    <Switch>
+      <Route path="/" exact component={SignIn} />
+      <Route path="/login" component={Dashboard} />
+      <Route path="/signup" isPrivate component={SignUp} />
+      <Route path="/dashboard" isPrivate component={Dashboard} />
+      <Route path="/" component={() => <h1>404</h1>} />
+    </Switch>
+  );
 }
