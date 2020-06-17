@@ -43,6 +43,7 @@ $secondary-color: #f2994a;
     .sidebar-lowerbox-box {
       margin: 20px 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       // border: 1px solid grey;

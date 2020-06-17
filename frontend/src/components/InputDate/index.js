@@ -28,7 +28,7 @@ const DatePicker = ({ name, label, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <div className="input-box">
+    <div className="input-box-datepicker">
       <label htmlFor={fieldName}>{label}</label>
 
       <ReactDatePicker
@@ -37,8 +37,7 @@ const DatePicker = ({ name, label, ...rest }) => {
         onChange={setDate}
         locale="pt"
         dateFormat="dd/MM/yyyy"
-        placeholderText="Data do sorteio"
-        timeCaption="Horário"
+        placeholderText="Data da operação"
         {...rest}
       />
       {error && <span className="error">{error}</span>}

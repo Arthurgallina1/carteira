@@ -15,7 +15,6 @@ export default function Dashboard() {
   return (
     <ThemeProvider theme={theme}>
       <div className="dashboard-container">
-        <Sidebar />
         <div className="dashboard-right-side">
           <Navbar />
           <Painel />

@@ -9,7 +9,7 @@ $secondary-color: #f2994a;
 
   .painel-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   big {
@@ -17,10 +17,16 @@ $secondary-color: #f2994a;
     font-weight: 600;
     line-height: 28px;
   }
+  .header-right-box {
+    display: flex;
+  }
 
   .painel-body {
     padding: 30px 0;
     display: flex;
     justify-content: center;
+  }
+  .painel-lower-body {
+    display: flex;
   }
 }

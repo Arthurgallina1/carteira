@@ -8,6 +8,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { Form } from "@unform/web";
 import Input from "../Input";
 import InputSelect from "../InputSelect";
+import InputMask from "../InputMask";
 import InputDate from "../InputDate";
 import { makeStyles } from "@material-ui/core/styles";
 import { listaAcoes } from "../../utils/ativos";
@@ -25,10 +26,15 @@ export default function AlertDialog({ icon }) {
     setOpen(false);
   };
 
-  async function handleSubmit(data) {
-    data.wallet_id = 5;
+  async function handleSubmit(data, { reset }) {
+    data.wallet_id = 6;
+    // console.log(data);
     const response = await api.post("/create_wallet_component", { data });
-    console.log(response);
+    if (response.data.status) {
+      console.log("ativo criado");
+    }
+
+    reset();
   }
 
   const useStyles = makeStyles({

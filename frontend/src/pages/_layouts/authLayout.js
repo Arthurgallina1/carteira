@@ -1,5 +1,12 @@
 import React from "react";
+import Sidebar from "../../components/Sidebar";
+import "./styles.scss";
 // import { Wrapper } from './styles'
 export default function authLayout({ children }) {
-    return <div className='auth-layout'>{children}</div>;
+  return (
+    <div className="auth-layout">
+      <Sidebar />
+      {children}
+    </div>
+  );
 }
