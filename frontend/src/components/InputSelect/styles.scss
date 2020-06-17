@@ -1,0 +1,14 @@
+$primary-color: #092c4c;
+.input-box {
+  .react-select-container {
+    width: 90%;
+    border-radius: 5px;
+    margin: 2px 5px 10px 5px;
+    border: 0;
+  }
+
+  label {
+    margin-left: 2%;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}

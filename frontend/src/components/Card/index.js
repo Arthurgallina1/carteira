@@ -38,7 +38,6 @@ const useStyles = makeStyles({
 });
 
 export default function SimpleCard({ icon, headerText, subText }) {
-  console.log(icon);
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 

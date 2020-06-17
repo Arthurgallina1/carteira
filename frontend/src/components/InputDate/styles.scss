@@ -1,0 +1,19 @@
+$primary-color: #092c4c;
+.input-box {
+  label {
+    margin-left: 2%;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  input {
+    width: 90%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px 5px 10px 5px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-out;
+  }
+  input:focus {
+    border: 1px solid $primary-color;
+  }
+}

@@ -13,10 +13,18 @@ $secondary-color: #f2994a;
     min-height: 75px;
   }
 
-  // .navlink-selected {
-  //   background: white;
-  //   border-radius: 4px;
-  // }
+  .navlink-selected {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      color: $primary-color;
+    }
+  }
 
   // .selected {
   //   padding: 0 16px;
@@ -34,6 +42,9 @@ $secondary-color: #f2994a;
 
     .sidebar-lowerbox-box {
       margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       // border: 1px solid grey;
     }
   }

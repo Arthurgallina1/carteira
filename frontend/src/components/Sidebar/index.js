@@ -13,21 +13,21 @@ export default function Sidebar() {
       <div className="sidebar-lowerbox">
         <div className="sidebar-lowerbox-box">
           <NavLink to="/dashboard" activeClassName="navlink-selected">
-            <AiFillHome size={26} color={"#fff"} />
+            <AiFillHome size={26} />
           </NavLink>
         </div>
         <div className="sidebar-lowerbox-box">
-          <NavLink to="/" activeClassName="navlink-selected">
+          <NavLink to="/profile" activeClassName="navlink-selected">
             <BsGraphUp size={26} color={"#fff"} />
           </NavLink>
         </div>
         <div className="sidebar-lowerbox-box">
-          <NavLink to="/" activeClassName="navlink-selected">
+          <NavLink to="/profile" activeClassName="navlink-selected">
             <BsWallet size={26} color={"#fff"} />
           </NavLink>
         </div>
         <div className="sidebar-lowerbox-box">
-          <NavLink to="/" activeClassName="navlink-selected">
+          <NavLink to="/profile" activeClassName="navlink-selected">
             <BsGraphUp size={26} color={"#fff"} />
           </NavLink>
         </div>
