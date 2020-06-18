@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import { BsWallet, BsGraphUp } from "react-icons/bs";
 import Typography from "@material-ui/core/Typography";
 import api from "../../utils/api";
-import PieChart from "../PieChart";
 import { formatter } from "../../utils/utils";
-import "./styles.scss";
+import LineChart from "../LineChart";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 200,
+    Width: 400,
     marginRight: 40,
   },
   body: {},
@@ -33,7 +29,7 @@ const useStyles = makeStyles({
   cardTitle: {
     fontSize: 18,
     fontWeight: 500,
-    color: "#f2994a",
+    color: "#092c4c",
   },
   pos: {
     marginBottom: 12,
@@ -56,18 +52,14 @@ export default function SimpleCard({ header, body }) {
 
   return (
     <Card className={classes.root}>
-      <CardContent className="descricacao-card">
-        <div className="descricao-card-header">
-          <Typography className={classes.cardTitle}>Descrição</Typography>
+      <CardContent className="card-body-bigger">
+        <div className="card-body-header">
+          <Typography className={classes.cardTitle}>Histórico</Typography>
         </div>
-        <div className="descricao-card-body">
-          <PieChart />
+        <div className="card-body-body">
+          <LineChart />
         </div>
-        <h2>Categoria</h2>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
   );
 }

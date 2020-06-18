@@ -18,17 +18,17 @@ export default function Sidebar() {
         </div>
         <div className="sidebar-lowerbox-box">
           <NavLink to="/profile" activeClassName="navlink-selected">
-            <BsGraphUp size={26} color={"#fff"} />
+            <BsWallet size={26} />
           </NavLink>
         </div>
         <div className="sidebar-lowerbox-box">
-          <NavLink to="/profile" activeClassName="navlink-selected">
-            <BsWallet size={26} color={"#fff"} />
+          <NavLink to="/home" activeClassName="navlink-selected">
+            <BsWallet size={26} />
           </NavLink>
         </div>
         <div className="sidebar-lowerbox-box">
-          <NavLink to="/profile" activeClassName="navlink-selected">
-            <BsGraphUp size={26} color={"#fff"} />
+          <NavLink to="/cu" activeClassName="navlink-selected">
+            <BsGraphUp size={26} />
           </NavLink>
         </div>
       </div>

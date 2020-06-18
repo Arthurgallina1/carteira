@@ -6,13 +6,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import { BsWallet, BsGraphUp } from "react-icons/bs";
 import Typography from "@material-ui/core/Typography";
-import api from "../../utils/api";
 import { formatter } from "../../utils/utils";
 import "./styles.scss";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 400,
+    minWidth: 300,
     marginRight: 40,
   },
   body: {},
@@ -40,18 +39,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard({ header, body }) {
-  const [components, setComponents] = useState([]);
+export default function SimpleCard({ components }) {
   const classes = useStyles();
-  useEffect(() => {
-    async function getWalletComponents() {
-      const response = await api.get("/get_wallet_component/6");
-      if (response.data.status) {
-        setComponents(response.data.data);
-      }
-    }
-    getWalletComponents();
-  }, []);
 
   return (
     <Card className={classes.root}>
