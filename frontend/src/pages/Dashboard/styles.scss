@@ -1,8 +1,7 @@
 .dashboard-container {
   display: flex;
-  flex: 1;
 
   .dashboard-right-side {
-    flex: 1;
+    margin-right: 80px;
   }
 }

@@ -4,7 +4,7 @@ import { IoMdNotificationsOutline, IoMdLogOut } from "react-icons/io";
 import { useSelector } from "react-redux";
 import "./styles.scss";
 export default function Navbar() {
-  const username = useSelector((state) => state.auth.user.username);
+  // const username = useSelector((state) => state.auth.user.username);
 
   return (
     <div className="header-container">
@@ -14,7 +14,7 @@ export default function Navbar() {
           {/* <Notifications /> */}
           <div className="header-profile">
             <div>
-              <strong>{username}</strong>
+              {/* <strong>{username}</strong> */}
               <Link to="/profile">My Profile</Link>
             </div>
             <div className="img-box">

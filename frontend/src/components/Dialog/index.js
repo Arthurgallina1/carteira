@@ -13,6 +13,7 @@ import InputDate from "../InputDate";
 import { makeStyles } from "@material-ui/core/styles";
 import { listaAcoes } from "../../utils/ativos";
 import api from "../../utils/api";
+import { formatter } from "../../utils/utils";
 
 export default function AlertDialog({ icon }) {
   const formRef = useRef(null);
@@ -28,11 +29,11 @@ export default function AlertDialog({ icon }) {
 
   async function handleSubmit(data, { reset }) {
     data.wallet_id = 6;
-    // console.log(data);
-    const response = await api.post("/create_wallet_component", { data });
-    if (response.data.status) {
-      console.log("ativo criado");
-    }
+    console.log(data);
+    // const response = await api.post("/create_wallet_component", { data });
+    // if (response.data.status) {
+    //   console.log("ativo criado");
+    // }
 
     reset();
   }
@@ -86,7 +87,7 @@ export default function AlertDialog({ icon }) {
                 options={listaAcoes}
               />
               <Input name="qtd" type="qtd" label="Quantidade" />
-              <Input name="price" type="price" label="Preço de Custo" />
+              <Input name="price" type="price" label="Preço de Custo (R$)" />
               <InputDate name="date" type="date" label="Data" />
             </DialogContentText>
           </DialogContent>

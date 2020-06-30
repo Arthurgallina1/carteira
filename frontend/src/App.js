@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import history from "./utils/history";
 import Routes from "./routes/index";
 import { store, persistor } from "./store";
+import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./styles.scss";
 function App() {
   return (

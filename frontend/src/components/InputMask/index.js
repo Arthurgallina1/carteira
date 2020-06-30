@@ -1,29 +1,39 @@
-import React, { useRef, useEffect } from "react";
-import ReactInputMask, { Props as InputProps } from "react-input-mask";
-
+import React, { useRef, useEffect, useState } from "react";
+import InputMask from "react-input-mask";
 import { useField } from "@unform/core";
 
-const InputMask = ({ name, ...rest }) => {
-  const inputRef = useRef(null);
+export default function Mask({ name, inputMask }) {
+  const ref = useRef(null);
   const { fieldName, registerField, defaultValue, error } = useField(name);
+  const [mask, setMask] = useState(defaultValue);
 
   useEffect(() => {
     registerField({
       name: fieldName,
-      ref: inputRef.current,
-      path: "value",
-      setValue(ref, value) {
-        ref.setInputValue(value);
-      },
-      clearValue(ref) {
-        ref.setInputValue("");
+      ref: ref.current,
+      path: "props.value",
+      clearValue: (pickerRef) => {
+        pickerRef.setInputValue(null);
       },
     });
   }, [fieldName, registerField]);
 
-  return (
-    <ReactInputMask ref={inputRef} defaultValue={defaultValue} {...rest} />
-  );
-};
+  function handleMask(e) {
+    const { value } = e.target;
+    return setMask(value);
+  }
 
-export default InputMask;
+  return (
+    <>
+      <label htmlFor={fieldName}>preco</label>
+      <InputMask
+        name={fieldName}
+        mask={inputMask}
+        value={mask}
+        onChange={(e) => handleMask(e)}
+        ref={ref}
+      />
+      {error && <span>{error}</span>}
+    </>
+  );
+}
